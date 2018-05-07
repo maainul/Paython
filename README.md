@@ -70,3 +70,25 @@ age
 key:age value:42
 key:color value:red
 ```
+### Checking wheter a key or value is exists in a Dictonary
+```
+>>>spam={'name':'zophine','age':7}
+>>>'name' in spam.keys()
+	True
+>>>'Zophine' in spam.keys()
+	True
+>>>'color' in spam.keys()
+	True
+>>>'color' not in spam.keys()
+	True
+>>>'color' in spam
+	False
+```
+### The get() Method
+```
+>>>picnicItems={'apple':5,'cups':2}
+>>>'I am bringing '+str(picnicItems.get('cup',0))+'cups'
+'I am bringing 2 cups'
+>>>'I am bringing '+str(picnicItems.get('eggs',0))+'eggs'
+'I am bringing 0 eggs'
+```
