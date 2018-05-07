@@ -92,3 +92,15 @@ key:color value:red
 >>>'I am bringing '+str(picnicItems.get('eggs',0))+'eggs'
 'I am bringing 0 eggs'
 ```
+### The setdefault() Method
+```
+spam={'name':'pooka','age':7}
+spam.setdefault('color','black')
+'black'
+>>spam
+{'color':'black',age':5,'name':'pooka'}
+>>>spam.setdefault('color':'white')
+'black'
+>>>spam
+{'color':'black','age':5,'name':'pooka'}
+```
