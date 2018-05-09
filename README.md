@@ -104,3 +104,142 @@ spam.setdefault('color','black')
 >>>spam
 {'color':'black','age':5,'name':'pooka'}
 ```
+
+
+# STRINGS
+```
+A string is a sequence of characters
+
+1.Sting decleration:
+
+	fruit='banana'
+	print(fruit)
+
+2.Index of strings:
+	
+	print(fruit[0])
+	b
+	print(fruit[1])
+	a
+
+3.Length of strings:
+
+	length=len(fruit) #Declear length variable 
+			   for store result of len function
+	print(length)
+
+4.Last alphabet of String:
+
+	last=fruit[len(fruit)-1]
+	print(last)
+
+5.Traversal through a string with while loop:
+```.py
+	fruit='banana'
+	print(fruit)
+	index=0
+	while index<len(fruit):
+    	letter=fruit[index]
+    	print(letter)
+    	index=index+1
+```
+    banana
+    b
+    a
+    n
+    a
+    n
+    a
+```.py
+fruit = 'banana is banana'
+for char in fruit:
+	print(char)
+```
+### String are immutable
+```.py
+greeting = 'Hello,World'
+greeting[0]='j'
+greeting = 'Hello,World'
+new_greeting='j'+greeting[1:]
+print(new_greeting)
+```
+```
+#TypeError: 'str' object does not support item assignment
+jello,World
+```
+### Looping and Counting
+```
+Count the number of times letter appears in a string
+```.py
+word='banana'
+count=0
+for letter in word:
+	if letter == 'n':
+		count=count+1
+print(count)
+```
+### The in Operator
+```
+Search the value if the first operator is substring in the second
+```.py
+	fruit='banana'
+	s1='a' in fruit
+	print(s1)
+	s2='seed' in fruit
+	print(s2)
+```
+	True
+	False
+```
+### Comparing Two string 
+```.py
+word='pineapple'
+if word =='banana':
+	print('banana')
+else:
+	print('pineapple')
+
+	word='pineapple'
+if word <'banana':
+	print('Your word, '+word+ ' come before banana')
+elif word>'banana':
+	print('your word '+word+ ' come after banana')
+else:
+	print('all right banana')
+```
+### String Methods
+	```.py
+	stuff='Hello world'
+	print(type(stuff))
+	print(dir(stuff))
+	```
+	```
+	<class 'str'>
+	['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+	```
+	
+	```.py
+	stuff='Hello world'
+	print(stuff.upper()) #Upper case letter:
+	print(stuff.lower()) #Lowler case letter:
+	```
+	```
+	HELLO WORLD
+	hello world
+	```
+
+	```.py
+	word='banana'
+	index=word.find('na') #Find index number:
+		print(index)
+	```
+	```.py
+	line=' Here we go'
+	print(line.strip()) #Remove whitespace from the beginning and end of a string
+	print(line.startswith('h'))#Check stars with lower case h or not.
+```
+```
+'Here we go'
+False
+```
+
