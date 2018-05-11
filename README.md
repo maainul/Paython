@@ -1,4 +1,4 @@
-# STRINGS
+# ##STRINGS
 
 A string is a sequence of characters
 
@@ -127,9 +127,10 @@ else:
 	print(line.strip()) #Remove whitespace from the beginning and end of a string
 	print(line.startswith('h'))#Check stars with lower case h or not.
 ```
-
-'Here we go'
+```
+Here we go
 False
+```
 # ##Files
 ## Opening a file
 ```.py
@@ -264,7 +265,7 @@ FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
 ```
 
 
-# Lists
+# ##Lists
 ```
 ##A list is a sequence of values.
 ##List can be any type
