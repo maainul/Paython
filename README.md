@@ -369,6 +369,48 @@ FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
 ```
 
 
+# Lists
+```
+##A list is a sequence of values.
+##List can be any type
+##The values in list are called elements
+	[10,20,30,40]
+	[fog,dog,rat]
+```
+```.py
+	cheeses=['dog','fog','not']
+	numbers=[12,14]
+	empty=[]
+	print(cheeses,numbers,empty)
+```
+```
+	'dog','fog','not',12,14,[]
+```
+## List operaton
+```.py
+	a=[1,2,3]
+	b=[4,5,6]
+	c=a+b
+	print(c)
+```
+```
+	[1,2,3,4,5,6]
+```
+## List slices
+```.py
+	t=['a','b','c','d','e']
+	t=[1:3]
+	['b','c']
+	t=[:4]
+	t=['a','b','c','d']
+	t=[4:]
+	t=['b','c','d','e']
+	t=[:]
+	t=['a','b','c','d','e']
+	t=[1:3]=['x','y']
+	print(t)
+	t=['a','x','y','b','c','d','e']
 
+```
 
 
