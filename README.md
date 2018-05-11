@@ -106,32 +106,32 @@ spam.setdefault('color','black')
 
 
 # STRINGS
-```
+
 A string is a sequence of characters
 
 1.Sting decleration:
-
+```.py
 	fruit='banana'
 	print(fruit)
-
+```
 2.Index of strings:
-	
+```.py	
 	print(fruit[0])
 	b
 	print(fruit[1])
 	a
-
+```
 3.Length of strings:
-
+```.py
 	length=len(fruit) #Declear length variable 
 			   for store result of len function
 	print(length)
-
+```
 4.Last alphabet of String:
-
+```.py
 	last=fruit[len(fruit)-1]
 	print(last)
-
+```
 5.Traversal through a string with while loop:
 ```.py
 	fruit='banana'
@@ -142,6 +142,7 @@ A string is a sequence of characters
     	print(letter)
     	index=index+1
 ```
+```
     banana
     b
     a
@@ -149,6 +150,7 @@ A string is a sequence of characters
     a
     n
     a
+```
 ```.py
 fruit = 'banana is banana'
 for char in fruit:
@@ -411,6 +413,93 @@ FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
 	print(t)
 	t=['a','x','y','b','c','d','e']
 
+```
+
+
+## List methods
+```.py
+	t=['a,'b,'c']
+	t.append('d')#append adds new element to the end of a list
+	print(t)
+```
+```
+	['a','b','c','d']
+
+```
+```.py
+	t1=['a,'b,'c']
+	t2=['d','e']
+
+	t1.extend(t2)('d')#extend takes a list as an arguments and append all of the elements
+	print(t)
+```
+```
+	['a','b','c','d','e']
+
+```
+```.py
+	t=['d,'f,'a','b']
+	t.sort()#sort elements of the list list
+	print(t)
+```
+```
+	['a','b','d','f']
+
+```
+## Deleting elements
+```
+#Pop modified list
+#Return the element that was removed
+#If you don't provide an index,it delets and returns last element
+```
+```.py
+	t=['a,'b,'c']
+	t.pop()
+
+	print(t)
+```
+```
+	['a','b']
+
+```
+```.py
+	t=['a,'b,'c']
+	t.pop(1)
+
+	print(t)
+```
+```
+	['a','c']
+
+```
+```.py
+	t=['a,'b,'c']
+	t.del t[1]
+#if you don't remove value you can use del
+	print(t)
+```
+```
+	['a','c']
+
+```
+```.py
+	t=['a,'b,'c']
+	t.del('b')
+#you can use elements name as well
+	print(t)
+```
+```
+	['a','c']
+
+```
+```.py
+	t=['a,'b,'c','d']
+	t.del[1:3]
+#you can use slice index
+	print(t)
+```
+```
+	['a']
 ```
 
 
