@@ -395,5 +395,75 @@ FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
 ```
 	['a']
 ```
+## Lists and Functions
+```.py
+	num=[3,41,12,9,74,15]
+	print(len(num))#Find length of numbers#6
+	print(max(num))#Find maximum numbers#74
+	print(min(num))#Find minimum numbers#3
+	print(sum(num))#Find sum of numbers#154
+	print(sum(num)/len(num))#Find average of numbers#25
+```
+```.py
+	total=0
+	count=0
+	while True:
+		inp=input('Enter a number:')
+		if inp=='done':
+		break
+		value=float(inp)
+		total=toatl+value
+		count=count+1
+	average=total/count
+	print('Average:',average)
+```
+```.py
+	numlist=list()
+	while True:
+		inp=input('Enter a number:')
+		if inp=='done':
+		break
+		value=float(inp)
+		numlist.append(value)
+	average=sum(numlist)/len(numlist)
+	print('Average:',average)
+```
+## List and String
+```.py
+	s='spam'
+	t=list(s)
+	print(t)
+```
+```
+	['s','p','a','m']
+```
+```.py
+	s='pining for the jord'
+	t=s.split()
+	print(t)
+	print(t[2])
+```
+```
+	['pining','for','the','jord']
+	'the'
+```
+```.py
+	s='spam-spam-spam'
+	delimiter='-'
+	s.split(delimiter)#Remove - from the string
+	print(s.split(delimiter))
+```
+```
+	['spam','spam','spam']
+```
+```.py
+	t='spam','spam','spam'
+	delimiter=' '
+	delimiter.joint(t)#Remove - from the string
+	print(delimiter.joint(t))
+```
+```
+	'spam spam spam'
+```
 
 
