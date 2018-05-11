@@ -131,7 +131,7 @@ else:
 Here we go
 False
 ```
-# ##Files
+# ##FILES
 ## Opening a file
 ```.py
 	fhand=open('mbox.txt')
@@ -265,7 +265,7 @@ FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
 ```
 
 
-# ##Lists
+# ##LISTS
 ```
 ##A list is a sequence of values.
 ##List can be any type
@@ -476,6 +476,31 @@ FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
 	continue
 	words=line.split()
 	print(word[2])
+```
+## List Arguments
+```.py
+	def delete_head(t)
+		del t[0]
+	letters=['a','b','c']
+	delete_head(letters)
+	print(letters)
+```
+['b','c']
+```.py
+	t1=[1,2]
+	t2=t1.append(3)
+	print(t1)
+	print(t2)
+	t3=t1+[3]
+
+	print(t3)
+	print(t2 is t3)
+```
+```
+[1,2,3]
+none
+[1,2,3]
+False
 ```
 
 
