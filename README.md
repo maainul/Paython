@@ -236,5 +236,139 @@ else:
 
 'Here we go'
 False
+# Files
+## Opening a file
+```.py
+	fhand=open('mbox.txt')
+	printf(fhand)
+```
+## Reading files
+```.py
+	fhand=open('mbox-short.txt')
+	count=o
+	for line in fhand:
+		count=count+1
+	print('line count',count)
+```
+```.py
+	fhand=open('mbox-short.txt')
+	inp=fhand.read()
+	print(len(inp))
+	print(inp[:20])
+```
+## Searcing through a file
+```.py
+	fhand=open('mbox-short.txt')
+	for line in fhand:
+		line=line.rstrip()
+		if line.startswith('From:')
+	print(line)
+```
+```
+	When this program runs, we get the following output:
+	From: stephen.marquard@uct.ac.za
+
+	From: louis@media.berkeley.edu
+	
+	From: zqian@umich.edu
+	
+	From: rjlowe@iupui.edu
+```
+```.py
+	fhand=open('mbox-short.txt')
+	for line in fhand:
+		line=line.rstrip() #For rstrip() function no space will not be printed
+		if line.startswith('From:')
+		print(line)
+```
+```
+	When this program runs, we get the following output:
+	From: stephen.marquard@uct.ac.za
+	From: louis@media.berkeley.edu
+	From: zqian@umich.edu
+	From: rjlowe@iupui.edu
+```
+```.py
+	fhand=open('mbox-short.txt')
+	for line in fhand:
+		line=line.rstrip()
+		#skip uninteresting lines
+		if not line.startswith('From:')
+			continue
+		#process intersting lines
+		print(line)
+```
+## Find method
+```.py
+	fhand=open('mbox-short.txt')
+	for line in fhand:
+		line=line.rstrip()
+		if line.find('@uct.ac.za')==-1:
+			continue
+		print(line)
+```
+From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
+X-Authentication-Warning: set sender to stephen.marquard@uct.ac.za using -f
+From: stephen.marquard@uct.ac.za
+Author: stephen.marquard@uct.ac.za
+From david.horwitz@uct.ac.za Fri Jan 4 07:02:32 2008
+X-Authentication-Warning: set sender to david.horwitz@uct.ac.za using -f
+From: david.horwitz@uct.ac.za
+Author: david.horwitz@uct.ac.za
+```
+## Letting the user choose the file name
+```.py
+	fname=input('Enter the file name')
+	fhand=open(fname)
+	count=0
+	for line in fhand:
+	if line.startswith('Subject:')
+		count=count+1
+	print('There were' ,count,'subjects in'fname)
+```
+```
+	python search6.py
+	Enter the file name: mbox.txt
+	There were 1797 subject lines in mbox.txt
+
+	python search6.py
+	Enter the file name: mbox-short.txt
+	There were 27 subject lines in mbox-short.txt
+```
+## Using try, except, and open
+```.py
+	fname=input('Enter the file name:')
+	try:
+		fhand=open(fanme)
+	except:
+		print('File cannot be opend',fname)
+		exit()
+	count=0
+	for line in fhand:
+		if line.startswith('Subject'):
+			count=count+1
+		print('There are ',count ,'subject line in',fanme)
+```
+```
+python search6.py
+Enter the file name: missing.txt
+Traceback (most recent call last):
+File "search6.py", line 2, in <module>
+fhand = open(fname)
+FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
+```
+## Writing files
+```.py
+	fout=open('output.txt')
+	print(fout)
+	line='This is a little water'
+	print(fout.write(line))
+	line1='This is a little'
+	print(fout.write(line1))
+	fout.close()
+```
+
+
+
 
 
