@@ -1,6 +1,5 @@
-# Paython
-## Automate The boring Stuff
-### Chapter 5 (Dictionaries and Structuring data)
+# Automate The boring Stuff
+## Chapter 5 (Dictionaries and Structuring data)
 
 ### The dictionary Data Type:
 ```
@@ -236,7 +235,7 @@ else:
 
 'Here we go'
 False
-# Files
+# ##Files
 ## Opening a file
 ```.py
 	fhand=open('mbox.txt')
@@ -306,6 +305,7 @@ False
 		if line.find('@uct.ac.za')==-1:
 			continue
 		print(line)
+```
 ```
 From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
 X-Authentication-Warning: set sender to stephen.marquard@uct.ac.za using -f
