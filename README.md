@@ -467,3 +467,16 @@ FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'
 ```
 
 
+## Parsing lines
+```.py
+	fhand=open('mbox-short.txt')
+	for line in fhand:
+	line=line.rstrip()
+	if not line.startswith('From'):
+	continue
+	words=line.split()
+	print(word[2])
+```
+
+
+
