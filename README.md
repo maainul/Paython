@@ -1,3 +1,12 @@
+
+``
+# String
+# Files
+# List
+# Dictonaries
+# Tuples
+```
+
 # ##STRINGS
 
 A string is a sequence of characters
@@ -673,7 +682,7 @@ a': 24, 'orchard': 2, 'light': 5, 'lovers': 2, 'romeo': 40,
 	A tuples is a comma seperated list of values
 	t='a','b','c','d','e'
 	t=('a','b','c','d','e')
-
+```
 To create single element,you have to include comma
 ```.py
 	t=('a',)
