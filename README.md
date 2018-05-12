@@ -502,6 +502,167 @@ none
 [1,2,3]
 False
 ```
+# ##DICTONARIES
+```
+	A dictonary like  a list
+	It can be integer,string both
+	The key(),values(),and items() Methods.
+	There are 3 dictionary methods:keys(),values() and items().
+	The values returned by these methods are not true lists.
+	They can not be modified and do not have append() method
+```
+```.py
+	spam={'color':'red','age':42}
+		for v in spam.values():
+	print(v)
+	for k in spam.keys():
+		print(k)
+	for i in spam.items():
+	print(i)
+```
+```
+red
+42
+	
+color
+age
+
+('color','red')
+('age',42)
+```
+```.py
+	spam={'color':'red','age':42}
+	for k,v in spam.items():
+		print('Key:'+k+'value:'+str(v))
+```
+```
+key:age value:42
+key:color value:red
+```
+## Checking wheter a key or value is exists in a Dictonary
+```.py
+	spam={'name':'zophine','age':7}
+	name' in spam.keys()
+	True
+	'Zophine' in spam.keys()
+	True
+	'color' in spam.keys()
+	True
+	'color' not in spam.keys()
+	True
+	'color' in spam
+	False
+```
+## The get() Method
+```.py
+	picnicItems={'apple':5,'cups':2}
+	'I am bringing '+str(picnicItems.get('cup',0))+'cups'
+	'I am bringing 2 cups'
+	'I am bringing '+str(picnicItems.get('eggs',0))+'eggs'
+	'I am bringing 0 eggs'
+```
+```.py
+	counts={'chuck':1,'annie':42,'jan':100}
+	print(counts.get('jan',0))
+	print(counts.get('tim',0))
+```
+```
+	100
+	0
+```
+## Dictonaries and files
+```.py
+	fname=input('Enter the file name')
+	try:
+		fhand=open(fname)
+	except:
+		print('File cannot be opened',fname)
+		exit()
+	counts=dict()
+	for line in fhand:
+		words=line.split()
+		for word in words:
+			if word not in counts:
+				counts[word]+=1
+				else:
+				count[word]+=1
+		print(counts)
+```
+the romeo.txt file is available at www.py4e.com/code3/romeo.txt
+```
+python count1.py
+Enter the file name: romeo.txt
+{'and': 3, 'envious': 1, 'already': 1, 'fair': 1,
+'is': 3, 'through': 1, 'pale': 1, 'yonder': 1,
+'what': 1, 'sun': 2, 'Who': 1, 'But': 1, 'moon': 1,
+'window': 1, 'sick': 1, 'east': 1, 'breaks': 1,
+'grief': 1, 'with': 1, 'light': 1, 'It': 1, 'Arise': 1,
+'kill': 1, 'the': 3, 'soft': 1, 'Juliet': 1}
+```
+ ## Looping and dictonaries
+ ```.py
+ 	counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+	for key in counts:
+	print(key, counts[key])
+```
+```
+jan 100
+chuck 1
+annie 42
+```
+```.py
+	counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+	for key in counts:
+	if counts[key] > 10 :
+	print(key, counts[key])
+```
+```
+jan 100
+annie 42
+```
+```.py
+	counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
+	lst = list(counts.keys())
+	print(lst)
+	lst.sort()
+	for key in lst:
+	print(key, counts[key])
+
+```
+```
+['jan', 'chuck', 'annie']
+annie 42
+chu
+```
+```.py
+	import string
+	fname = input('Enter the file name: ')
+	try:
+		fhand = open(fname)
+	except:
+		print('File cannot be opened:', fname)
+		exit()
+	counts = dict()
+	for line in fhand:
+		line = line.rstrip()
+			line = line.translate(line.maketrans('', '', string.punctuation))
+		line = line.lower()
+		words = line.split()
+	for word in words:
+		if word not in counts:
+			counts[word] = 1
+		else:
+			counts[word] += 1
+	print(counts)
+```
+```
+Enter the file name: romeo-full.txt
+{'swearst': 1, 'all': 6, 'afeard': 1, 'leave': 2, 'these': 2,
+'kinsmen': 2, 'what': 11, 'thinkst': 1, 'love': 24, 'cloak': 1,
+a': 24, 'orchard': 2, 'light': 5, 'lovers': 2, 'romeo': 40,
+'maiden': 1, 'whiteupturned': 1, 'juliet': 32, 'gentleman': 1,
+'it': 22, 'leans': 1, 'canst': 1, 'having': 1, ...}
+```
 
 
 
