@@ -663,6 +663,70 @@ a': 24, 'orchard': 2, 'light': 5, 'lovers': 2, 'romeo': 40,
 'maiden': 1, 'whiteupturned': 1, 'juliet': 32, 'gentleman': 1,
 'it': 22, 'leans': 1, 'canst': 1, 'having': 1, ...}
 ```
+# TUPLES
+```
+	A tuples is sequence of value much like list.
+	The value stored in tuples can be any tupe.
+	Indexed by integer
+	Tuples are immutable
+	Tuples are comparable and hashable
+	A tuples is a comma seperated list of values
+	t='a','b','c','d','e'
+	t=('a','b','c','d','e')
+
+To create single element,you have to include comma
+```.py
+	t=('a',)
+	type=(t)
+	print(type)
+
+```
+```
+	<Type 'tuple'>
+```
+```.py
+	t=('a')
+	type=(t)
+	print(type)
+
+```
+```
+	<Type 'str'>
+```
+```.py
+	t=('lupins')
+
+	print(t)
+
+```
+```
+	('l','u','p','i','n','s')
+```
+We can use indexing on tuples
+```.py
+	t=('a','b','c','d','e')
+	print(t[0])
+```
+```
+	'a'
+```
+We can use slice on tuples
+```.py
+	t=('a','b','c','d','e')
+	print(t[1:3])
+```
+```
+	('b','c')
+```
+We cann't modify the tuples but we can replace the tuple emlements
+```.py
+t=('a','b','c','d','e')
+	t=('A',)+t[1:]
+	print(t)
+```
+```
+	t=('A','b','c','d','e')
+```
 
 
 
