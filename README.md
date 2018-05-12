@@ -1,10 +1,10 @@
 
 ``
-# String
-# Files
-# List
-# Dictonaries
-# Tuples
+String
+Files
+List
+Dictonaries
+Tuples
 ```
 
 # ##STRINGS
