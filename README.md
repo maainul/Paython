@@ -727,6 +727,71 @@ t=('a','b','c','d','e')
 ```
 	t=('A','b','c','d','e')
 ```
+## Tuple assignment
+```.py
+	m=['have','fun']
+	(x,y)=m
+	print(x)
+	print(y)
+```
+```
+	have
+	fun
+```
+```.py
+	m=['have','fun']
+	x=m[0]
+	y=m[1]
+	print(x)
+	print(y)
+```
+```
+	have
+	fun
+```
+To split an email address and username and domain name:
+```.py
+	addr='mainul@gmail.com'
+	uname,domain=addr.split('@')
+	print(uname)
+	print(domain)
+```
+```
+	mainul
+	gmail.com
+```
+## Dictonaries and tuples
+```.py
+	d={'a':10,'b':20,'c':3}
+	t=list(d.item())#item is a method to return a list of tuple
+	print(t)
+```
+```
+	[('b',1),('a',1),('c',1)]#No particular order
+```
+To give particular order use can use sort
+```.py
+	d={'a':10,'b':20,'c':4}
+	t=list(d.item())
+	print(t)
+	print(t.sort)
+```
+```
+	[('b',1),('a',1),('c',1)]
+	[('a',10),('b',20),('c',1)]
+```
 
+
+
+
+
+
+
+
+
+
+
+
+```
 
 
