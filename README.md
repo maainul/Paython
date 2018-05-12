@@ -789,18 +789,59 @@ To give particular order use can use sort
 	[('b',1),('a',1),('c',1)]
 	[('a',10),('b',20),('c',1)]
 ```
-
-
-
-
-
-
-
-
-
-
-
-
+## Multiple assignment with dictonaries
+```.py
+	for key,val in list(d.items()):
+		print(val,key)
+```
+```
+10 a
+22 c
+1 b
+```
+```.py	
+	d={'a':10,'b':1,'c':22}
+	l=list()
+	for key,val in d.items():
+		l.append(val,key)
+	print(l)
+	[(10,'a'),(22,'c'),(1,'b')]
+	l.sort(reverse=True)
+	print(l)
+	[(22,'c'),(10,'a'),(1,'b')]
+```
+```.py
+import string
+fhand = open('romeo-full.txt')
+counts = dict()
+for line in fhand:
+    line = line.translate(str.maketrans('', '', string.punctuation))
+    line = line.lower()
+    words = line.split()
+    for word in words:
+        if word not in counts:
+            counts[word] = 1
+        else:
+            counts[word] += 1
+#Sort the dictionary by value
+lst = list()
+for key, val in list(counts.items()):
+    lst.append((val, key))
+lst.sort(reverse=True)
+for key, val in lst[:10]:
+    print(key, val)
+```
+```
+61 i 
+42 and
+40 romeo
+34 to
+34 the
+32 thou 
+32 juliet
+30 that
+29 my
+24 thee
 ```
 
 
