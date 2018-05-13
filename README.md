@@ -844,4 +844,59 @@ for key, val in lst[:10]:
 24 thee
 ```
 
+# ##REGULAR EXRESSION
+```.py
+
+	import re
+	hand=open('mox-short.txt')
+	for line in hand:
+	line=line.rstrip()
+		if re.search('From:',line):
+		print(line)
+```
+
+```.py
+
+	import re
+	hand=open('mox-short.txt')
+	for line in hand:
+	line=line.rstrip()
+		if re.search('`From:',line):
+		print(line)
+```
+## Character matching in regular expressions
+```.py
+	# Search for lines that start with 'F', followed by
+	# 2 characters, followed by 'm:'
+	import re
+	hand = open('mbox-short.txt')
+	for line in hand:
+	line = line.rstrip()
+		if re.search('^F..m:', line):
+	print(line)
+```
+```.py
+	import re
+	hand=open('mbox-short.txt')
+	for line in hand:
+	line =line.rstrip()
+		if re.search('^From:..+@',line)
+	print(line)
+```
+## Extrcting data using regular expressions
+```.py
+	import re
+	a='A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
+	lst=re.findall('\S+@\S',a)
+	print(lst)
+```
+```.py
+	import re
+	hand=open('mbox-short.txt')
+	for line in hand:
+		line=line.rstrip()
+		x=re.findall('\S+@\S',line)
+		if len(x)>0
+		print(x)
+```
 
