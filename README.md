@@ -1,10 +1,16 @@
 
 ```
-String
-Files
-List
-Dictonaries
-Tuples
+1.Variables,expressions and statements
+2.Conditional Execution
+3.Function
+4.Iteration
+5.String
+6.Files
+7.List
+8.Dictonaries
+9.Tuples
+10.Regular Expressions
+
 ```
 
 # ##STRINGS
@@ -899,4 +905,112 @@ for key, val in lst[:10]:
 		if len(x)>0
 		print(x)
 ```
+```.py
+# Search for lines that have an at sign between characters
+# The characters must be a letter or number
+	import re
+	hand = open('mbox-short.txt')
+	for line in hand:
+	line = line.rstrip()
+	x = re.findall('[a-zA-Z0-9]\S+@\S+[a-zA-Z]', line)
+		if len(x) > 0:
+	print(x)
+# Code: http://www.py4e.com/code3/re07.py
+```
+## Combining Searching and extracting
+```.py
+# Search for lines that start with 'X' followed by any non
+# whitespace characters and ':'
+# followed by a space and any number.
+# The number can include a decimal.
+	import re
+	hand = open('mbox-short.txt')
+	for line in hand:
+	line = line.rstrip()
+		if re.search('^X\S*: [0-9.]+', line):
+	print(line)
+# Code: http://www.py4e.com/code3/re10.py
 
+```
+```
+X-DSPAM-Confidence: 0.8475
+X-DSPAM-Probability: 0.0000
+X-DSPAM-Confidence: 0.6178
+X-DSPAM-Probability: 0.0000
+
+```
+```.py
+# Search for lines that start with 'X' followed by any
+# non whitespace characters and ':' followed by a space
+# and any number. The number can include a decimal.
+# Then print the number if it is greater than zero.
+	import re
+	hand = open('mbox-short.txt')
+	for line in hand:
+	line = line.rstrip()
+	x = re.findall('^X\S*: ([0-9.]+)', line)
+		if len(x) > 0:
+	print(x)
+# Code: http://www.py4e.com/code3/re11.py	
+
+```
+```
+The output from this program is as follows:
+['0.8475']
+['0.0000']
+['0.6178']
+['0.0000']
+['0.6961']
+['0.0000']
+..
+```
+```.py
+
+# Search for lines that start with 'Details: rev='
+# followed by numbers and '.'
+# Then print the number if it is greater than zero
+	import re
+	hand = open('mbox-short.txt')
+	for line in hand:
+	line = line.rstrip()
+	x = re.findall('^Details:.*rev=([0-9.]+)', line)
+	if len(x) > 0:
+	print(x)
+# Code: http://www.py4e.com/code3/re12.py
+```
+```
+When we run the program, we get the following output:
+['39772']
+['39771']
+['39770']
+['39769']
+...
+```
+```.py
+
+# Search for lines that start with From and a character
+# followed by a two digit number between 00 and 99 followed by ':'
+# Then print the number if it is greater than zero
+	import re
+	hand = open('mbox-short.txt')
+	for line in hand:
+	line = line.rstrip()
+	x = re.findall('^From .* ([0-9][0-9]):', line)
+	if len(x) > 0: print(x)
+# Code: http://www.py4e.com/code3/re13.py
+```
+```
+When the program runs, it produces the following output:
+['09']
+['18']
+['16']
+['15']
+...
+
+```
+## Escape Character
+```.py
+
+
+
+```
