@@ -12,6 +12,33 @@
 10.Regular Expressions
 
 ```
+# ##FUNCTIONS
+```.py
+
+	type(32)
+	<class 'int'>
+	type('32')
+	<class 'string'>
+	max('mainul')
+	'u'
+	min(mainul)
+	'a'
+	len('mainul')
+	6
+	int(3.999)
+	3
+	int(-9.098)
+	9
+	float(32)
+	32.0
+	float('3.1416')
+	3.1416
+	str(32)
+	'32'
+	str(3.14)
+	'3.14'
+```
+
 
 # ##STRINGS
 
