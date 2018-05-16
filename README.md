@@ -37,9 +37,41 @@
 	'32'
 	str(3.14)
 	'3.14'
+	random.randint(5,10)
+	5
+	random.randint(5,10)
+	6
+	random.randint(5,10)
+	9
 ```
-
-
+## Random Number
+```.py
+for i in range(10)
+	x=random.random()
+	print(x)
+```
+```.py
+	t=[1,2,3,4]
+	random.choice(t)
+	3
+	random.choice(t)
+	2
+	random.choice(t)
+	1
+```
+## Adding new functions
+```.py
+def print_lyrics():
+print("I'm a lumberjack, and I'm okay.")
+print('I sleep all night and I work all day.')
+```	
+```.py
+	def addtwo(a,b)
+	added=a+b
+	return added
+	x=addtwo(3,5
+	print(x)
+```
 # ##STRINGS
 
 A string is a sequence of characters
