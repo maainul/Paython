@@ -12,6 +12,26 @@
 10.Regular Expressions
 
 ```
+# ##Largest and smallest value
+```.py
+largest=None
+print('Before:',largest)
+for num in [3,41,12,9,74,15]:
+	if largest is None or num >largest:
+		largest=num
+		#print('Loop:',num,largest)
+print('largest:',largest)
+
+```
+```.py
+smallest=None
+print('Before:',smallest)
+for num in [3,41,12,9,74,15]:
+	if smallest is None or num <smallest:
+		smallest=num
+print('largest:',smallest)
+```
+
 # ##FUNCTIONS
 ```.py
 
