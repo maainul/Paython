@@ -1155,6 +1155,11 @@ Arise fair sun and kill the envious moon
 Who is already s
 
 ```
+## Retriving web page using urllib
+```.py
+import urllib.request
+
+fhand=urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
 
 
 
