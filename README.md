@@ -1160,6 +1160,28 @@ Who is already s
 import urllib.request
 
 fhand=urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+for line in fhand:
+    print(line.decode().strip())
+``` 
+```
+But soft what light through yonder window breaks
+It is the east and Juliet is the sun
+Arise fair sun and kill the envious moon
+Who is already sick and pale with grief
+```
+```.py
+import urllib.request,urllib.parse,urllib.error
+fhand=urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+counts=dict()
+for line in fhand:
+   words=line.decode().split()
+   for word in words:
+       counts[word]=counts.get(word,0)+1
+print(counts)
+```
+```
+{'is': 3, 'pale': 1, 'east': 1, 'soft': 1, 'window': 1, 'Arise': 1, 'light': 1, 'Who': 1, 'sick': 1, 'what': 1, 'It': 1, 'But': 1, 'with': 1, 'through': 1, 'envious': 1, 'grief': 1, 'moon': 1, 'the': 3, 'sun': 2, 'breaks': 1, 'fair': 1, 'Juliet': 1, 'and': 3, 'yonder': 1, 'kill': 1, 'already': 1}
+```
 
 
 
