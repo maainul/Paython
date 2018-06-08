@@ -12,6 +12,36 @@
 10.Regular Expressions
 
 ```
+## #Organizing Files
+### Copying Files and Folder
+```.py
+#Shell utilities module has function to copy,move,rename,and delete
+#shutil,copy('source','destination')
+import shutil,os
+shutil.copy('/home/mainul/Desktop/copy_files/anik.txt','/home/mainul/Downloads/new_anik_2.txt')
+#copy tree copy all the folder or file inside the directory
+shutil.copytree('/home/mainul','/home/mainul/Downloads/backup_2')
+```
+### Moving File into another director
+```.py
+import shutil,os
+shutil.move('/home/mainul/Downloads/anik.txt','/home/mainul/Desktop/copy_files')
+shutil.move('/home/mainul/Downloads/new_anik_2.txt','/home/mainul/Desktop/copy_files/B_anik.txt')
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 # ##Largest and smallest value
 ```.py
 largest=None
