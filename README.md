@@ -13,6 +13,14 @@
 
 ```
 ## #Organizing Files
+```
+make directory:
+	os.makedirs('Destination')
+	os.makedirs('/home/mainul/Desktop/aaku')
+change working directory:
+	os.chdir('destination')
+	os.chdir('/home/mainul/Desktop/copy_files')
+
 ### Copying Files and Folder
 ```.py
 #Shell utilities module has function to copy,move,rename,and delete
