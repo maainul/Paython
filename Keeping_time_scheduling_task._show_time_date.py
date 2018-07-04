@@ -12,3 +12,5 @@ print(ds)
 td = datetime.timedelta(days=11, hours=5, minutes=12, seconds=8)
 print(td)
 
+ma = st.strftime('%Y/%m/%d %H:%M:%S %p')
+print(ma)
