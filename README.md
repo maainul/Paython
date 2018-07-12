@@ -101,7 +101,59 @@ print('largest:',smallest)
 	6
 	random.randint(5,10)
 	9
-```
+## LISTS(Mutable)
+	a=[,2,3,4,5]
+	b=[cat]
+	list('cat')
+	>> c,a,t
+	b.split()
+	>>['c','a','t']
+	a[0]
+	>>'c'
+	a[-1]
+	>>'t'
+	a[0:2]
+	>>ca
+	a[:3]
+	>>cat
+	a[::-2]
+	>>'t','a'
+	a.append('dog')
+	>>['cat','dog']
+	b=['bird','crow']
+	a.extend(b)
+	>>['cat''dog','bird','crow']
+	a=a+b // a+=b
+	>>['cat''dog','bird','crow']
+	a.insert(3,'goat')
+	>>>>['cat''dog','goat','bird','crow']
+	del a[0]
+	>>['dog','bird','crow']
+	b.remove('dog')
+	>>['cat','bird','crow']
+	b.pop() //It will remove from the back
+	>>['dog','bird']
+	a.index('cat')
+	>>0
+	'dog' in a
+	>>True
+	a.count('dog')
+	>>1
+	','.join(a)
+	dog,cat,crow
+	//we have to create another variable to store sorted value
+	a_b.sorted()//It did not change the original value
+	>>['bird','cat','crow','dog']
+	a.sort()//it change the original value//value of a will be sorted//no need to assign another variable
+	>>['bird','cat','crow','dog']
+	
+	
+	
+	
+	
+	
+	```
+	
 ## Random Number
 ```.py
 for i in range(10)
