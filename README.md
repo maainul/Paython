@@ -69,6 +69,21 @@ for num in [3,41,12,9,74,15]:
 		smallest=num
 print('largest:',smallest)
 ```
+# List Comprehentions
+```
+# list comprehension
+list_comprehension = list(range(1, 6))
+print(list_comprehension)
+# list comprehension with for loop
+list_for_comprehension = [number for number in range(1, 10)]
+print(list_for_comprehension)
+# list comprehension with for loop and if condition odd number
+list_odd = [number for number in range(1, 10) if number % 2 != 0]
+print(list_odd)
+# list comprehension with for loop and if condition even number
+list_odd = [number for number in range(1, 10) if number % 2 == 0]
+print(list_odd)
+```
 
 # ##FUNCTIONS
 ```.py
@@ -146,13 +161,8 @@ print('largest:',smallest)
 	>>['bird','cat','crow','dog']
 	a.sort()//it change the original value//value of a will be sorted//no need to assign another variable
 	>>['bird','cat','crow','dog']
-	
-	
-	
-	
-	
-	
-	```
+```	
+
 	
 ## Random Number
 ```.py
