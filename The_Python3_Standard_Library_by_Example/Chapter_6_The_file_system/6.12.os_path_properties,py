@@ -1,0 +1,16 @@
+import os.path
+import time
+
+print('File         :',__file__)
+print('Access time  :',time.ctime(os.path.getmtime(__file__)))
+print('Modified time:',time.ctime(os.path.getmtime(__file__)))
+print('Change time  :',time.ctime(os.path.getmtime(__file__)))
+print('Size         :',os.path.getsize(__file__))
+
+
+OUTPUT
+File         : /home/mainul/PycharmProjects/chapter_6/6.12.OS_path_properties.py
+Access time  : Thu Aug  2 15:06:04 2018
+Modified time: Thu Aug  2 15:06:04 2018
+Change time  : Thu Aug  2 15:06:04 2018
+Size         : 301
