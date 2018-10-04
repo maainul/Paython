@@ -698,31 +698,74 @@ False
 ```
 # ##DICTONARIES
 ```
-	A dictonary like  a list
-	It can be integer,string both
+	A dictonary is a collection of many values.
+	Indexes for dictonaries are called Key.
+	A key with associated value is called a key-value pair.
+	Dictonaty are unordered.
+	A dictonary like  a list.
+	There is no first item in dictonary.
+	It can be integer,string both.
 	The key(),values(),and items() Methods.
 	There are 3 dictionary methods:keys(),values() and items().
 	The values returned by these methods are not true lists.
 	They can not be modified and do not have append() method
 ```
+
+```
+	mycat = {'size':'fat','color':'gray','disposition':'loud'}
+	mycat['size']
+	'fat'
+	'My cat has '+mycat['color'] +'fur'.
+
+	spam = {'cat'}
+```
+```
+Comparison of list:
+	spam =['cat','dog']
+	bacon =['dog','cat']
+	spam ==bacon
+	False
+Comparision of Dictonary:
+	eggs = {'name':'zophe','color':'gray'}
+	ham = {'color':'gray','name':'zophe'}
+	eggs == ham
+	True
+```
+
+
+## The Key() value() and item() method:
 ```.py
 	spam={'color':'red','age':42}
-		for v in spam.values():
-	print(v)
+	for v in spam.values():
+		print(v)
+	
+	red
+	42
+	
 	for k in spam.keys():
 		print(k)
+	
+	color
+	age
+
 	for i in spam.items():
 	print(i)
-```
-```
-red
-42
 	
-color
-age
+	('color','red')
+	('age',42)
 
-('color','red')
-('age',42)
+```
+### Find the name and age of your friends.
+```
+	name ={'mainul':23,'shible':22,'mamun':21,'samiul':20}
+	for k,v in name.items():
+		print(k + ' Age:' + str(v))
+
+
+	mainul Age:23
+	shible Age:22
+	mamun Age:21
+	samiul Age:20
 ```
 ```.py
 	spam={'color':'red','age':42}
@@ -736,7 +779,7 @@ key:color value:red
 ## Checking wheter a key or value is exists in a Dictonary
 ```.py
 	spam={'name':'zophine','age':7}
-	name' in spam.keys()
+	'name' in spam.keys()
 	True
 	'Zophine' in spam.keys()
 	True
@@ -763,6 +806,11 @@ key:color value:red
 ```
 	100
 	0
+```
+## Deleting data from dictonary
+```
+	del name['mainul']
+	name.clear()
 ```
 ## Dictonaries and files
 ```.py
